@@ -1,8 +1,10 @@
 <template>
   <nav class="flex align-center justify-center w-full fixed z-10 mt-4">
-    <ul class="flex gap-8 p-4 text-xl text-white font-bold">
+    <ul class="flex gap-8 p-3 text-xl text-white font-bold">
       <li>
-        <router-link to="/">Work /</router-link>
+        <router-link to="/" class="flex gap-1"
+          >Work <mdicon name="slash-forward-box"
+        /></router-link>
       </li>
       <li>
         <router-link to="/about">About</router-link>
@@ -22,7 +24,7 @@
 
 ul {
   border-radius: 50px;
-  background-color: rgba(35, 56, 49, 0.7);
+  background-color: rgba(35, 56, 49, 0.3);
   backdrop-filter: blur(20px) saturate(1.7);
 }
 
@@ -41,7 +43,7 @@ li:hover {
   border: transparent 3px solid;
   background-color: rgb(0, 255, 171, 0.375);
   border-radius: 5rem;
-  padding: 0.2rem 1.5rem;
+  padding: 0.2rem 1.375rem;
   cursor: pointer;
 }
 </style>
