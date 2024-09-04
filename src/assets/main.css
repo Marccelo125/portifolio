@@ -17,4 +17,8 @@
     html {
         font-family: "Source Sans 3", sans-serif;
     }
+
+    body {
+        background-color: #1e1e24;
+    }
 }
