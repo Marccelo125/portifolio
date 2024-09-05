@@ -1,6 +1,6 @@
 <template>
   <nav class="flex align-center justify-center w-full fixed z-10 mt-4">
-    <ul class="flex gap-8 p-3 text-xl text-white font-bold">
+    <ul class="flex gap-4 lg:gap-8 p-3 text-sm lg:text-xl text-white font-bold">
       <li>
         <router-link to="/" class="flex gap-1"
           >Work <mdicon name="slash-forward-box"
