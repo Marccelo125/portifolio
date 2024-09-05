@@ -21,4 +21,19 @@
     body {
         background-color: #1e1e24;
     }
+
+    h1::selection {
+        color: rgb(191, 250, 199);
+        background-color: #12362a;
+    }
+
+    h1 > span::selection {
+        color: rgb(191, 250, 199);
+        background-color: #12362a;
+    }
+
+    h1 > br::selection {
+        color: rgb(191, 250, 199);
+        background-color: #12362a;
+    }
 }
