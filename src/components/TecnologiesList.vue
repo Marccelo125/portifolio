@@ -44,6 +44,13 @@
         JavaScript
       </li>
       <li
+        class="flex font-semibold gap-1 bg-[#4492a9] text-[#f7f7f7]"
+        style="border-color: #4492a9"
+      >
+        <mdicon name="vuetify" />
+        Vuetify
+      </li>
+      <li
         class="flex font-semibold gap-1 bg-[#24a7f3] text-[#152468]"
         style="border-color: #24a7f3"
       >
