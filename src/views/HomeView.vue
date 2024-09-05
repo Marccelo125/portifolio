@@ -8,9 +8,12 @@ import TecnologiesList from '@/components/TecnologiesList.vue'
     <HeaderComponent />
   </header>
   <main class="mb-12 pb-0 w-full">
-    <section class="flex css-selector">
-      <div class="w-6/6 p-8 lg:w-2/4 lg:m-14 lg:mt-20">
-        <h1 class="text-[#00FFAB] text-7xl" style="font-family: Archivo Black; letter-spacing: 0px">
+    <section class="flex justify-center css-selector">
+      <div class="flex flex-col w-full lg:w-1/2 m-12 mt-24 justify-center align-center">
+        <h1
+          class="text-[#00FFAB] text-4xl sm:text-5xl lg:text-7xl"
+          style="font-family: Archivo Black; letter-spacing: 0px"
+        >
           Hi. I'm Marcelo. <br />
           <span>A Developer.</span>
         </h1>
@@ -22,11 +25,12 @@ import TecnologiesList from '@/components/TecnologiesList.vue'
           </div>
         </div>
       </div>
-      <div
-        class="hidden lg:flex lg:justify-center lg:align-center lg:w-2/6 lg:h-full lg:p-8 lg:m-14"
-        lg=""
-      >
-        <img src="@/assets/images/foto_perfil_linkedin.jpg" class="flex rounded-full mw-4/6" />
+      <div class="hidden lg:flex lg:justify-center lg:align-center lg:h-full lg:m-12">
+        <img
+          src="@/assets/images/foto_perfil_linkedin.jpg"
+          class="rounded-full"
+          style="max-width: 400px"
+        />
       </div>
     </section>
 
@@ -39,7 +43,8 @@ import TecnologiesList from '@/components/TecnologiesList.vue'
       </div>
     </section>
 
-    <section class="bg-[#222831] mx-24 p-4 rounded-3xl">
+    <section class="hidden bg-[#222831] mx-24 p-4 rounded-3xl lg:flex">
+      <!-- TODO: grid sistem -->
       <div class="flex gap-4 m-12">
         <div class="max-w-sm bg-dark border border-gray-900 rounded-lg shadow">
           <a href="#">
