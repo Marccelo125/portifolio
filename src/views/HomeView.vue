@@ -43,44 +43,10 @@ import TecnologiesList from '@/components/TecnologiesList.vue'
       </div>
     </section>
 
-    <section class="hidden bg-[#222831] mx-24 p-4 rounded-3xl lg:flex">
+    <section class="flex bg-[#222831] mx-24 p-4 rounded-3xl lg:flex">
       <!-- TODO: grid sistem -->
-      <div class="flex gap-4 m-12">
-        <div class="max-w-sm bg-dark border border-gray-900 rounded-lg shadow">
-          <a href="#">
-            <img class="rounded-t-lg" src="@/assets/images/growflix-banner.png" alt="" />
-          </a>
-          <div class="p-5 bg-[#1a1f25]">
-            <a href="#">
-              <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#00FFAB]">Growflix</h5>
-            </a>
-            <p class="mb-3 font-normal text-white">
-              Growflix is a streaming plataform that allows you to watch growcasts and more.
-            </p>
-            <a
-              href="#"
-              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
-            >
-              Read more
-              <svg
-                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div class="max-w-sm bg-[#1a1f25] border border-gray-900 rounded-lg shadow">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 m-12">
+        <div class="bg-[#1a1f25] max-w-sm border border-gray-900 rounded-lg shadow">
           <a href="#">
             <img class="rounded-t-lg" src="@/assets/images/growflix-banner.png" alt="" />
           </a>
@@ -114,7 +80,75 @@ import TecnologiesList from '@/components/TecnologiesList.vue'
             </a>
           </div>
         </div>
-        <div class="max-w-sm bg-[#1a1f25] border border-gray-900 rounded-lg shadow">
+        <div class="bg-[#1a1f25] max-w-sm border border-gray-900 rounded-lg shadow">
+          <a href="#">
+            <img class="rounded-t-lg" src="@/assets/images/growflix-banner.png" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#00FFAB]">Growflix</h5>
+            </a>
+            <p class="mb-3 font-normal text-white">
+              Growflix is a streaming plataform that allows you to watch growcasts and more.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#1a1f25] max-w-sm border border-gray-900 rounded-lg shadow">
+          <a href="#">
+            <img class="rounded-t-lg" src="@/assets/images/growflix-banner.png" alt="" />
+          </a>
+          <div class="p-5">
+            <a href="#">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-[#00FFAB]">Growflix</h5>
+            </a>
+            <p class="mb-3 font-normal text-white">
+              Growflix is a streaming plataform that allows you to watch growcasts and more.
+            </p>
+            <a
+              href="#"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+            >
+              Read more
+              <svg
+                class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="bg-[#1a1f25] max-w-sm border border-gray-900 rounded-lg shadow">
           <a href="#">
             <img class="rounded-t-lg" src="@/assets/images/growflix-banner.png" alt="" />
           </a>
