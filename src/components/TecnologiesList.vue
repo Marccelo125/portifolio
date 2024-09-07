@@ -1,7 +1,17 @@
+<script setup lang="ts">
+const props = defineProps({
+  data: {
+    type: String,
+    default: 'all'
+  }
+})
+</script>
+
 <template>
   <div>
-    <ul class="flex flex-wrap gap-2">
+    <ul class="flex align-center justify-center flex-wrap gap-1 text-md">
       <li
+        v-if="props.data.includes('vuejs') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#00ffab] text-[#124b38]"
         style="border-color: #00ffab"
       >
@@ -9,6 +19,7 @@
         VueJS
       </li>
       <li
+        v-if="props.data.includes('nuxt') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#1a5c46] text-[#ffffff]"
         style="border-color: #1a5c46"
       >
@@ -16,6 +27,7 @@
         Nuxt
       </li>
       <li
+        v-if="props.data.includes('laravel') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#d1491f] text-[#ffffff]"
         style="border-color: #d1491f"
       >
@@ -23,6 +35,7 @@
         Laravel
       </li>
       <li
+        v-if="props.data.includes('typescript') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#244bb6] text-[#ffffff]"
         style="border-color: #244bb6"
       >
@@ -30,6 +43,7 @@
         TypeScript
       </li>
       <li
+        v-if="props.data.includes('php') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#4f35c2] text-[#ffffff]"
         style="border-color: #5f40e6"
       >
@@ -37,6 +51,7 @@
         Php
       </li>
       <li
+        v-if="props.data.includes('javascript') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#f0f324] text-[#685215]"
         style="border-color: #f0f324"
       >
@@ -44,6 +59,7 @@
         JavaScript
       </li>
       <li
+        v-if="props.data.includes('vuetify') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#4492a9] text-[#f7f7f7]"
         style="border-color: #4492a9"
       >
@@ -51,6 +67,7 @@
         Vuetify
       </li>
       <li
+        v-if="props.data.includes('tailwind') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#24a7f3] text-[#152468]"
         style="border-color: #24a7f3"
       >
@@ -58,6 +75,7 @@
         Tailwind
       </li>
       <li
+        v-if="props.data.includes('bootstrap') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#8b35ec] text-[#f7f7f7]"
         style="border-color: #8b35ec"
       >
@@ -65,6 +83,7 @@
         Bootstrap
       </li>
       <li
+        v-if="props.data.includes('mysql') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#aa66f7] text-[#f7f7f7]"
         style="border-color: #aa66f7"
       >
