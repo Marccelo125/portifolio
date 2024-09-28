@@ -167,7 +167,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
           class="text-[#00FFAB] text-xl sm:text-3xl md:text-4xl lg:text-5xl"
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
-          This portifolio is a work in progress. <br />
+          This portfolio is a work in progress. <br />
         </h1>
       </div>
     </section>
