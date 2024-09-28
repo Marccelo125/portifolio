@@ -16,12 +16,31 @@ function showIframe(url: string) {
 function hideIframe() {
   return (iframeSwitch.value = false)
 }
+
+function showDialog() {
+  let dialog = document.getElementById('iframeDialog')
+  dialog?.classList.remove('hidden')
+  dialog?.classList.add('flex')
+  setTimeout(() => {
+    dialog?.classList.add('opacity-100')
+  }, 20)
+}
+
+function hideDialog() {
+  let dialog = document.getElementById('iframeDialog')
+  dialog?.classList.remove('opacity-100')
+  setTimeout(() => {
+    dialog?.classList.add('hidden')
+    dialog?.classList.remove('flex')
+  }, 500)
+}
 </script>
 
 <template>
   <header>
     <HeaderComponent active="work" />
   </header>
+
   <main class="mb-12 pb-0 w-full">
     <section class="flex justify-center">
       <div class="flex flex-col w-full lg:w-1/2 m-12 mt-28 justify-center align-center text-center">
@@ -32,20 +51,24 @@ function hideIframe() {
           Hi. I'm Marcelo. <br />
           <span>A Developer.</span>
         </h1>
-        <p class="text-[#b5fce4] mb-10 mt-6 text-sm sm:text-md md:text-xl">
+        <p class="text-[#b5fce4] my-6 text-sm sm:text-md md:text-xl">
           I'm passionate about creating experiences with programming, <br />
           web development and technology.
         </p>
-        <div class="flex font-medium text-lg justify-center gap-4 text-white mt-2 mb-8">
-          <button class="btn-hireme px-10 py-3 rounded-xl">
+        <div class="font-medium flex flex-col text-lg gap-4 text-white mt-2 mb-8">
+          <div class="flex justify-center">
+            <button class="btn-downloadcv flex align-center px-10 py-3 rounded-xl gap-2">
+              <span
+                ><a href="https://marcelo-duarte-cv.tiiny.site/" target="_blank"
+                  >Download CV</a
+                ></span
+              >
+              <mdicon name="TrayArrowDown" size="25" />
+            </button>
+          </div>
+          <!-- <button class="btn-hireme px-10 py-3 rounded-xl">
             <a href="https://www.linkedin.com/in/marcelo-duarte1/" target="_blank">Hire me</a>
-          </button>
-          <button class="btn-downloadcv flex px-10 py-3 rounded-xl gap-2">
-            <span
-              ><a href="https://marcelo-duarte-cv.tiiny.site/" target="_blank">Download CV</a></span
-            >
-            <mdicon name="TrayArrowDown" size="25" />
-          </button>
+          </button> -->
         </div>
         <div
           class="tecnologies-known-card text-white p-0 md:p-4 lg:mx-24 lg:p-6 rounded-3xl text-sm md:text-md lg:text-xl"
@@ -62,80 +85,54 @@ function hideIframe() {
             class="text-[#00FFAB] text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
             style="font-family: Archivo Black; letter-spacing: 0px"
           >
-            MY WORKS
+            MY PROJECTS
           </h1>
         </div>
       </section>
 
-      <!-- BANNER MODEL 01 -->
-      <!-- <section>
-        <div class="grid grid-rows-3 grid-cols-3 gap-4 mx-4 md:mx-40 lg:mx-80">
-          <div class="card col-span-2 rounded-md md:rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
-              <img
-                src="@/assets/images/library.png"
-                class="bg-cover rounded-md md:rounded-3xl h-full w-full"
-                alt=""
-              />
-            </a>
-          </div>
+      <!-- MODAL -->
+      <div
+        @click="hideDialog(), hideIframe()"
+        id="iframeDialog"
+        class="justify-center items-center fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen transition-opacity duration-200 opacity-0 hidden"
+      >
+        <div
+          @click="(event) => event.stopPropagation()"
+          class="bg-[#1e1e24] rounded shadow-md w-[100%] md:w-[90%] lg:w-[70%]"
+        >
+          <section>
+            <article class="flex justify-between align-end">
+              <p class="flex text-gray-200 items-center py-3 px-5 m-2 font-medium">
+                Visualização do site
+              </p>
+              <button
+                @click="hideDialog(), hideIframe()"
+                class="py-3 px-5 m-2 rounded text-gray-200 transition-all duration-200 hover:scale-110"
+              >
+                <mdicon name="close" />
+              </button>
+            </article>
+          </section>
 
-          <div class="card rounded-md md:rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
-              <img
-                src="@/assets/images/card-images/calculator-fivem.png"
-                class="h-full rounded-md md:rounded-3xl"
-                alt=""
-              />
-            </a>
-          </div>
-
-          <div class="card rounded-md md:rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
-              <img
-                src="@/assets/images/card-images/grow-flix.png"
-                class="h-full rounded-md md:rounded-3xl"
-                alt=""
-              />
-            </a>
-          </div>
-
-          <div class="card col-span-2 rounded-md md:rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
-              <img
-                src="@/assets/images/card-images/growtwitter.png"
-                class="rounded-md md:rounded-3xl h-full w-full"
-                alt=""
-              />
-            </a>
-          </div>
-
-          <div class="card col-span-3 rounded-md md:rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
-              <img
-                src="@/assets/images/starbucks-prj-img.png"
-                class="rounded-md md:rounded-3xl"
-                alt=""
-              />
-            </a>
-          </div>
+          <section v-if="iframeSwitch">
+            <DynamicIframe :url="actualUrl" />
+          </section>
+          <section class="flex align-center justify-center">
+            <button
+              @click="hideDialog(), hideIframe()"
+              class="flex bg-gray-800 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
+            >
+              Repositório GitHub
+            </button>
+            <button
+              @click="hideDialog(), hideIframe()"
+              class="flex bg-red-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
+            >
+              Fechar Visualização
+            </button>
+          </section>
         </div>
-      </section> -->
-
-      <!-- BANNER MODEL 02 -->
-      <section v-if="iframeSwitch">
-        <div class="flex justify-center aling-center">
-          <DynamicIframe class="rounded-lg" :url="actualUrl" />
-        </div>
-        <div class="flex">
-          <button
-            @click="hideIframe()"
-            class="bg-[#cf5a5a] mx-64 my-0 lg:mx-[22rem] w-full font-medium text-white text-lg text-center py-4 px-8"
-          >
-            Encerrar visualização
-          </button>
-        </div>
-      </section>
+      </div>
 
       <section class="flex mx-2 md:mx-24 p-4 rounded-3xl">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:m-12 w-full">
@@ -162,7 +159,7 @@ function hideIframe() {
           </div>
 
           <div
-            @click="showIframe('https://starbucks-shop-prj.vercel.app/')"
+            @click="showIframe('https://starbucks-shop-prj.vercel.app/'), showDialog()"
             class="card bg-[#be8b48] rounded-3xl"
           >
             <div>
@@ -209,7 +206,7 @@ function hideIframe() {
           </div>
 
           <div
-            @click="showIframe('https://growflix-project.vercel.app/')"
+            @click="showIframe('https://growflix-project.vercel.app/'), showDialog()"
             class="card bg-[#be487f] rounded-3xl"
           >
             <div>
@@ -241,34 +238,37 @@ function hideIframe() {
 </template>
 
 <style scoped>
-.btn-hireme {
-  background-color: #2727e7;
-  border: #2727e7 2px solid;
-  transition: all 0.2s;
+#iframeDialog {
+  z-index: 9998;
 }
 
-.btn-hireme:hover {
-  border: #2727e7 2px solid;
-  background-color: transparent;
-  transform: scale(1.03);
+.contact-logo {
+  transition: all 0.2s;
+  color: rgb(59, 59, 59);
+}
+
+.contact-logo:hover {
+  transform: scale(1.2);
+  color: #00ffab;
 }
 
 .btn-downloadcv {
-  border: #2727e7 2px solid;
-  color: #ffffff;
-  background-color: transparent;
+  border: #00ffab 2px solid;
+  color: #0c0c0c;
+  background-color: #00ffab;
   transition: all 0.2s;
 }
 
 .btn-downloadcv:hover {
   color: #ffffff;
-  background-color: #2727e7;
+  background-color: transparent;
   transform: scale(1.03);
 }
 
 .card {
   transition: all 0.2s;
   cursor: pointer;
+  z-index: 1;
 }
 
 .card:hover {
