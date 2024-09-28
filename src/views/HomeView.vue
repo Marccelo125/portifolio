@@ -41,7 +41,7 @@ function hideDialog() {
     <HeaderComponent active="work" />
   </header>
 
-  <main class="mb-12 pb-0 w-full">
+  <main class="w-full">
     <section class="flex justify-center">
       <div class="flex flex-col w-full lg:w-1/2 m-12 mt-28 justify-center align-center text-center">
         <h1
@@ -66,9 +66,6 @@ function hideDialog() {
               <mdicon name="TrayArrowDown" size="25" />
             </button>
           </div>
-          <!-- <button class="btn-hireme px-10 py-3 rounded-xl">
-            <a href="https://www.linkedin.com/in/marcelo-duarte1/" target="_blank">Hire me</a>
-          </button> -->
         </div>
         <div
           class="tecnologies-known-card text-white p-0 md:p-4 lg:mx-24 lg:p-6 rounded-3xl text-sm md:text-md lg:text-xl"
