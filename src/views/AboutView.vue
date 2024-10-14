@@ -63,19 +63,19 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
       <ol class="relative border-s border-gray-200 dark:border-gray-700 w-1/3">
         <li class="mb-10 ms-6">
           <span
-            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-800"
+            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-700"
           >
             <mdicon name="TrayArrowDown" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
           <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">
             Growdev - Web Full Stack
             <span
-              class="bg-blue-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-800 dark:text-gray-200 ms-3"
+              class="bg-blue-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-700 dark:text-gray-200 ms-3"
               >Latest</span
             >
           </h3>
           <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-            >From September 2023 to September 2024</time
+            >From September 2023 to October 2024</time
           >
           <p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
             This is where I developed my programming skills, learning design patterns to clean code
@@ -85,7 +85,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
         </li>
         <li class="mb-10 ms-6">
           <span
-            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-800"
+            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-700"
           >
             <mdicon name="TrayArrowDown" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
@@ -104,7 +104,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
         </li>
         <li class="mb-10 ms-6">
           <span
-            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-800"
+            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-700"
           >
             <mdicon name="TrayArrowDown" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
@@ -124,7 +124,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
         </li>
         <li class="mb-10 ms-6">
           <span
-            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-800"
+            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-700"
           >
             <mdicon name="TrayArrowDown" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
@@ -143,7 +143,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
         </li>
         <li class="ms-6">
           <span
-            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-800"
+            class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-700"
           >
             <mdicon name="TrayArrowDown" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
@@ -167,7 +167,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
           class="text-[#00FFAB] text-xl sm:text-3xl md:text-4xl lg:text-5xl"
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
-          This portfolio is a work in progress. <br />
+          This portfólio is a work in progress. <br />
         </h1>
       </div>
     </section>
