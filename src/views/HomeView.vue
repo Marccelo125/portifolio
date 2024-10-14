@@ -153,7 +153,7 @@ function hideDialog() {
       </div>
 
       <section class="flex mx-2 md:mx-24 p-4 rounded-3xl">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:m-12 w-full">
+        <article class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:m-12 w-full">
           <div class="card bg-[#48be6c] rounded-3xl">
             <div
               @click="
@@ -166,7 +166,7 @@ function hideDialog() {
               "
             >
               <div class="text-end text-[#0b440e] p-6">
-                <p>Front-end & Back-end</p>
+                <p>Front-end & Back-end [in progress]</p>
                 <h1
                   class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
@@ -185,17 +185,16 @@ function hideDialog() {
             </div>
           </div>
 
-          <div
-            @click="
-              showIframe(
-                'https://starbucks-shop-prj.vercel.app/',
-                'https://github.com/Marccelo125/starbucks-shop-prj'
-              ),
-                showDialog()
-            "
-            class="card bg-[#be8b48] rounded-3xl"
-          >
-            <div>
+          <div class="card bg-[#be8b48] rounded-3xl">
+            <div
+              @click="
+                showIframe(
+                  'https://starbucks-shop-prj.vercel.app/',
+                  'https://github.com/Marccelo125/starbucks-shop-prj'
+                ),
+                  showDialog()
+              "
+            >
               <div class="text-end text-[#442d0b] p-6">
                 <p>Front-end</p>
                 <h1
@@ -216,7 +215,7 @@ function hideDialog() {
             </div>
           </div>
 
-          <div class="card bg-[#5e48be] rounded-3xl">
+          <div class="card bg-[#6fbeff] rounded-3xl">
             <div
               @click="
                 showIframe(
@@ -227,7 +226,7 @@ function hideDialog() {
                   showDialog()
               "
             >
-              <div class="text-end text-[#150b44] p-6">
+              <div class="text-end text-[#002442] p-6">
                 <p>Front-end & Back-end</p>
                 <h1
                   class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
@@ -241,23 +240,22 @@ function hideDialog() {
                   class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
-                  <mdicon class="my-16" name="Chat" size="80" style="color: #5e48be" />
+                  <mdicon class="my-16" name="Chat" size="80" style="color: #6fbeff" />
                 </div>
               </div>
             </div>
           </div>
 
-          <div
-            @click="
-              showIframe(
-                'https://growflix-project.vercel.app/',
-                'https://github.com/Marccelo125/growflix'
-              ),
-                showDialog()
-            "
-            class="card bg-[#be487f] rounded-3xl"
-          >
-            <div>
+          <div class="card bg-[#be487f] rounded-3xl">
+            <div
+              @click="
+                showIframe(
+                  'https://growflix-project.vercel.app/',
+                  'https://github.com/Marccelo125/growflix'
+                ),
+                  showDialog()
+              "
+            >
               <div class="text-end text-[#440b31] p-6">
                 <p>Front-end</p>
                 <h1
@@ -277,7 +275,67 @@ function hideDialog() {
               </div>
             </div>
           </div>
-        </div>
+
+          <div class="card bg-[#c94848] rounded-3xl">
+            <div
+              @click="
+                showIframe(
+                  'https://calculadora-fivem.vercel.app/',
+                  'https://github.com/Marccelo125/calculadora-fivem'
+                ),
+                  showDialog()
+              "
+            >
+              <div class="text-end text-[#4e0d0d] p-6">
+                <p>Front-end</p>
+                <h1
+                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  style="font-family: Source Sans 3"
+                >
+                  Calculadora FiveM
+                </h1>
+              </div>
+              <div class="pl-8">
+                <div
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
+                >
+                  <mdicon class="my-16" name="HeartPlusOutline" size="80" style="color: #c94848" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card bg-[#5e48be] rounded-3xl">
+            <div
+              @click="
+                showIframe(
+                  'https://nikel-project.vercel.app/',
+                  'https://github.com/Marccelo125/Nikel'
+                ),
+                  showDialog()
+              "
+            >
+              <div class="text-end text-[#150b44] p-6">
+                <p>Front-end</p>
+                <h1
+                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  style="font-family: Source Sans 3"
+                >
+                  Nikel
+                </h1>
+              </div>
+              <div class="pl-8">
+                <div
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
+                >
+                  <mdicon class="my-16" name="Cash" size="80" style="color: #5e48be" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
     </div>
   </main>
