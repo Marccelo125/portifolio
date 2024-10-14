@@ -7,9 +7,15 @@ import { ref } from 'vue'
 
 const actualUrl = ref<string>('')
 const iframeSwitch = ref<boolean>(false)
+const gHubFront = ref<string>('')
+const gHubBack = ref<string>('')
 
-function showIframe(url: string) {
-  actualUrl.value = url
+function showIframe(urlDeploy: string, urlFront?: string, urlBack?: string) {
+  actualUrl.value = urlDeploy
+
+  if (urlFront != undefined) gHubFront.value = urlFront
+  if (urlBack != undefined) gHubBack.value = urlBack
+
   iframeSwitch.value = true
 }
 
@@ -111,16 +117,31 @@ function hideDialog() {
             </article>
           </section>
 
-          <section v-if="iframeSwitch">
+          <section class="bg-white" v-if="iframeSwitch && actualUrl != ''">
             <DynamicIframe :url="actualUrl" />
           </section>
+
+          <section class="bg-white" v-if="iframeSwitch && actualUrl == ''">
+            <DynamicIframe :url="'https://guthib.com/'" />
+          </section>
+
           <section class="flex align-center justify-center">
-            <button
-              @click="hideDialog(), hideIframe()"
-              class="flex bg-gray-800 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
+            <a
+              v-if="gHubFront"
+              :href="gHubFront"
+              target="_blank"
+              class="flex bg-gray-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
             >
-              Repositório GitHub
-            </button>
+              Repositório Front-end
+            </a>
+            <a
+              v-if="gHubBack"
+              :href="gHubBack"
+              target="_blank"
+              class="flex bg-gray-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
+            >
+              Repositório Back-end
+            </a>
             <button
               @click="hideDialog(), hideIframe()"
               class="flex bg-red-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
@@ -134,7 +155,16 @@ function hideDialog() {
       <section class="flex mx-2 md:mx-24 p-4 rounded-3xl">
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:m-12 w-full">
           <div class="card bg-[#48be6c] rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
+            <div
+              @click="
+                showIframe(
+                  '',
+                  'https://github.com/Marccelo125/front-library',
+                  'https://github.com/Marccelo125/api-library'
+                ),
+                  showDialog()
+              "
+            >
               <div class="text-end text-[#0b440e] p-6">
                 <p>Front-end & Back-end</p>
                 <h1
@@ -152,11 +182,17 @@ function hideDialog() {
                   <mdicon class="my-16" name="LibraryOutline" size="80" style="color: #48be6c" />
                 </div>
               </div>
-            </a>
+            </div>
           </div>
 
           <div
-            @click="showIframe('https://starbucks-shop-prj.vercel.app/'), showDialog()"
+            @click="
+              showIframe(
+                'https://starbucks-shop-prj.vercel.app/',
+                'https://github.com/Marccelo125/starbucks-shop-prj'
+              ),
+                showDialog()
+            "
             class="card bg-[#be8b48] rounded-3xl"
           >
             <div>
@@ -181,7 +217,16 @@ function hideDialog() {
           </div>
 
           <div class="card bg-[#5e48be] rounded-3xl">
-            <a href="https://github.com/Marccelo125/starbucks-shop-prj" target="_blank">
+            <div
+              @click="
+                showIframe(
+                  'https://develop.di2dciudu7zky.amplifyapp.com/login',
+                  'https://github.com/dev-growdev/growtwitter-front',
+                  'https://github.com/dev-growdev/growtwitter-api'
+                ),
+                  showDialog()
+              "
+            >
               <div class="text-end text-[#150b44] p-6">
                 <p>Front-end & Back-end</p>
                 <h1
@@ -199,11 +244,17 @@ function hideDialog() {
                   <mdicon class="my-16" name="Chat" size="80" style="color: #5e48be" />
                 </div>
               </div>
-            </a>
+            </div>
           </div>
 
           <div
-            @click="showIframe('https://growflix-project.vercel.app/'), showDialog()"
+            @click="
+              showIframe(
+                'https://growflix-project.vercel.app/',
+                'https://github.com/Marccelo125/growflix'
+              ),
+                showDialog()
+            "
             class="card bg-[#be487f] rounded-3xl"
           >
             <div>
