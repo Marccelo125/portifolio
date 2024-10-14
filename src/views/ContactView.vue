@@ -9,7 +9,7 @@ import ContactsComponent from '@/components/ContactsComponent.vue'
     <HeaderComponent active="contact" />
   </header>
 
-  <main class="mb-12 pb-0 w-full">
+  <main class="mb-0 md:mb-12 pb-0 w-full">
     <section class="flex justify-center mb-12">
       <div
         class="flex flex-row w-full lg:w-1/2 mx-12 mt-28 justify-center align-center gap-4 md:gap-12 text-start"
@@ -35,7 +35,7 @@ import ContactsComponent from '@/components/ContactsComponent.vue'
       </div>
     </section>
 
-    <section class="flex justify-center bg-[#1b1b20]">
+    <section class="flex justify-center bg-[#1b1b20] md:bg-transparent">
       <div
         class="flex flex-row w-full justify-start lg:w-1/2 align-cente gap-4 md:gap-24 text-start"
       >
