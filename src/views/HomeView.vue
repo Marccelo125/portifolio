@@ -14,12 +14,15 @@ function showIframe(urlDeploy: string, urlFront?: string, urlBack?: string) {
   actualUrl.value = urlDeploy
 
   if (urlFront != undefined) gHubFront.value = urlFront
+
   if (urlBack != undefined) gHubBack.value = urlBack
 
   iframeSwitch.value = true
 }
 
 function hideIframe() {
+  gHubFront.value = ''
+  gHubBack.value = ''
   return (iframeSwitch.value = false)
 }
 
