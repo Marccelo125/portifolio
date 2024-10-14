@@ -9,6 +9,6 @@ const props = defineProps({
 
 <template>
   <div>
-    <iframe :src="props.url" class="w-full h-[350px] md:h-[400px] lg:h-[600px]" />
+    <iframe :src="props.url" class="w-full h-[350px] md:h-[500px] lg:h-[700px]" />
   </div>
 </template>
