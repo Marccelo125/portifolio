@@ -41,9 +41,9 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
             while gaining experience in diverse environments that helped me develop both soft and
             hard skills. <br />
           </span>
-          <span class="hidden md:flex">
-            I'm now seeking opportunities to work alongside top professionals, where I can continue
-            to grow and deliver high-quality projects ahead of schedule.
+          <span class="hidden md:flex text-green-200 text-xl">
+            <br />I'm now seeking opportunities to work alongside top professionals, where I can
+            continue to grow and deliver high-quality projects ahead of schedule.
           </span>
         </div>
       </article>
