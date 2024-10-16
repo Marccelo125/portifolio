@@ -179,7 +179,7 @@ function hideDialog() {
               </div>
               <div class="pl-8">
                 <div
-                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-[#cdffcf]"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
                   <mdicon class="my-16" name="LibraryOutline" size="80" style="color: #48be6c" />
@@ -209,7 +209,7 @@ function hideDialog() {
               </div>
               <div class="pl-8">
                 <div
-                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-[#ffe8cd]"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
                   <mdicon class="my-16" name="CoffeeToGoOutline" size="80" style="color: #be8b48" />
@@ -240,7 +240,7 @@ function hideDialog() {
               </div>
               <div class="pl-8">
                 <div
-                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-[#d9f1ff]"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
                   <mdicon class="my-16" name="Chat" size="80" style="color: #6fbeff" />
@@ -270,7 +270,7 @@ function hideDialog() {
               </div>
               <div class="pl-8">
                 <div
-                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-[#ffcde9]"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
                   <mdicon class="my-16" name="MovieOpen" size="80" style="color: #be487f" />
@@ -300,7 +300,7 @@ function hideDialog() {
               </div>
               <div class="pl-8">
                 <div
-                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-[#ffcdcd]"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
                   <mdicon class="my-16" name="HeartPlusOutline" size="80" style="color: #c94848" />
@@ -330,7 +330,7 @@ function hideDialog() {
               </div>
               <div class="pl-8">
                 <div
-                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-white"
+                  class="flex justify-center rounded-s-3xl rounded-br-3xl bg-[#e0cdff]"
                   style="height: 220px; overflow: clip; overflow-clip-margin: content-box"
                 >
                   <mdicon class="my-16" name="Cash" size="80" style="color: #5e48be" />
