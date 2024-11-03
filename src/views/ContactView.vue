@@ -4,12 +4,14 @@ import FooterComponent from '@/components/FooterComponent.vue'
 import ContactsComponent from '@/components/ContactsComponent.vue'
 
 import { useI18n } from 'vue-i18n'
+import LanguageSwitch from '@/components/LanguageSwitch.vue'
 const { t } = useI18n()
 </script>
 
 <template>
   <header>
     <HeaderComponent active="contact" />
+    <LanguageSwitch />
   </header>
 
   <main class="mb-0 md:mb-12 pb-0 w-full">
