@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import FooterComponent from '@/components/FooterComponent.vue'
 import HeaderComponent from '@/components/HeaderComponent.vue'
+
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 </script>
 
 <template>
@@ -11,13 +14,13 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
   <main class="w-full">
     <section class="flex justify-center">
       <div
-        class="flex flex-col w-full lg:w-1/2 m-12 mt-36 md:m-28 md:mt-40 justify-center align-center text-center"
+        class="flex flex-col w-full lg:w-1/2 m-12 mt-36 md:m-12 md:mt-40 justify-center align-center text-center"
       >
         <h1
-          class="text-[#00FFAB] text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+          class="text-[#00FFAB] text-left md:text-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
-          I'm Marcelo. <br />
+          {{ t('AboutView.im-marcelo') }} <br />
         </h1>
       </div>
     </section>
@@ -32,18 +35,15 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
             class="text-[#00FFAB] font-bold text-4xl md:text-5xl lg:text-6xl"
             style="font-family: Archivo; letter-spacing: 0px"
           >
-            I'm a Full Stack Web Developer studing remotely from Brazil.
+            {{ t('AboutView.fullstack-developer') }}
           </p>
         </div>
         <div class="mt-10">
           <span class="text-green-200 text-xl">
-            Over the past year, I refined my skills at Growdev with the support of Sicredi Pioneira,
-            while gaining experience in diverse environments that helped me develop both soft and
-            hard skills. <br />
+            {{ t('AboutView.over-the-past-year') }} <br />
           </span>
           <span class="hidden md:flex text-green-200 text-xl">
-            <br />I'm now seeking opportunities to work alongside top professionals, where I can
-            continue to grow and deliver high-quality projects ahead of schedule.
+            <br />{{ t('AboutView.now-seeking-oportunities') }}
           </span>
         </div>
       </article>
@@ -54,10 +54,10 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
         class="flex flex-col w-full lg:w-1/2 mt-12 md:mt-28 justify-center align-center text-center"
       >
         <h1
-          class="text-[#00FFAB] text-xl sm:text-3xl md:text-4xl lg:text-5xl"
+          class="text-[#00FFAB] text-3xl md:text-4xl lg:text-5xl"
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
-          Courses and Degrees <br />
+          {{ t('AboutView.courses-and-degrees') }} <br />
         </h1>
       </div>
     </section>
@@ -80,16 +80,15 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
             Growdev - Web Full Stack
             <span
               class="bg-blue-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-700 dark:text-gray-200 ms-3"
-              >Latest</span
+              >{{ t('AboutView.latest') }}</span
             >
           </h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-            >From September 2023 to October 2024</time
+          <time
+            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >{{ t('AboutView.growdev-time') }}</time
           >
           <p class="flex mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-            This is where I developed my programming skills, learning design patterns to clean code
-            principles. I gained hands-on experience with technologies like Vue.js, Laravel (PHP),
-            as well as frameworks such as Bootstrap and Vuetify.
+            {{ t('AboutView.growdev-info') }}
           </p>
         </li>
         <li class="listItem mb-6 ms-6">
@@ -101,14 +100,12 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
           <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
             SENAC - Front End Development
           </h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-            >From October 2023 to November 2023</time
+          <time
+            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >{{ t('AboutView.senac-front-time') }}</time
           >
           <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-            This advanced course will enhance our JavaScript web development skills and improve
-            teamwork and problem-solving abilities. With guidance from experienced professionals, we
-            will work on real projects, preparing us for real-world challenges and ensuring we are
-            ready to confidently enter the Front-End development field.
+            {{ t('AboutView.senac-front-info') }}
           </p>
         </li>
         <li class="listItem mb-6 ms-6">
@@ -120,15 +117,12 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
           <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
             SENAC - JavaScript Programming and Soft Skills
           </h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-            >From August 2023 to September 2023</time
+          <time
+            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >{{ t('AboutView.senac-js-time') }}</time
           >
           <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-            This Introduction to Developer course with JavaScript and Soft Skills at Senac provides
-            an exciting start for beginners in programming and web development. We will learn
-            JavaScript to create websites while developing teamwork and problem-solving skills. With
-            hands-on experience in real projects and guidance from professionals, we'll be ready to
-            confidently enter the web development field.
+            {{ t('AboutView.senac-js-info') }}
           </p>
         </li>
         <li class="listItem mb-6 ms-6">
@@ -138,16 +132,14 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
             <mdicon name="Cogs" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
           <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            SENAI - Industrial Machinery Maintenance
+            {{ t('AboutView.senai-mech-name') }}
           </h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-            >From September 2021 to April 2023</time
+          <time
+            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >{{ t('AboutView.senai-mech-time') }}</time
           >
           <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-            This Maintenance Mechanics course at SENAI offers comprehensive training in industrial
-            mechanics, focusing on diagnosing, repairing, and maintaining mechanical equipment.
-            Experienced instructors emphasize interpersonal skills, preparing students for in-demand
-            roles in manufacturing, oil, automotive, and energy sectors.
+            {{ t('AboutView.senai-mech-info') }}
           </p>
         </li>
         <li class="listItem ms-6">
@@ -157,14 +149,14 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
             <mdicon name="School" size="14" class="text-green-800 dark:text-gray-200" />
           </span>
           <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
-            High School Education
+            {{ t('AboutView.high-school-name') }}
           </h3>
-          <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
-            >Finished in December 2022</time
+          <time
+            class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+            >{{ t('AboutView.high-school-time') }}</time
           >
           <p class="font-normal text-gray-500 dark:text-gray-400">
-            Completed High School Education, gaining foundational knowledge and skills in various
-            subjects, preparing for further academic and professional opportunities.
+            {{ t('AboutView.high-school-info') }}
           </p>
         </li>
       </ol>
@@ -178,7 +170,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
           class="text-[#00FFAB] text-xl sm:text-3xl md:text-4xl lg:text-5xl"
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
-          This portfolio is a work in progress. <br />
+          {{ t('AboutView.work-in-progress') }} <br />
         </h1>
       </div>
     </section>
