@@ -11,8 +11,11 @@ const { t } = useI18n()
 <template>
   <header>
     <HeaderComponent active="contact" />
-    <LanguageSwitch />
   </header>
+  
+  <section class="flex justify-center pt-16 lg:pt-0 lg:justify-start">
+    <LanguageSwitch />
+  </section>
 
   <main class="mb-0 md:mb-12 pb-0 w-full">
     <section class="flex justify-center mb-12">
