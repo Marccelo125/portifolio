@@ -20,7 +20,7 @@ watchEffect(() => {
 </script>
 
 <template>
-  <nav class="flex align-center justify-start w-full fixed mt-7 mx-6 gap-4">
+  <nav class="flex align-center justify-start fixed mt-7 mx-6 gap-4">
     <button
       v-if="storedLang != 'pt'"
       @click="setLanguage('pt')"
