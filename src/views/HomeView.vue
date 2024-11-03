@@ -2,6 +2,7 @@
 import DynamicIframe from '@/components/DynamicIframe.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import LanguageSwitch from '@/components/LanguageSwitch.vue'
 import TecnologiesList from '@/components/TecnologiesList.vue'
 import { ref } from 'vue'
 
@@ -51,6 +52,7 @@ function hideDialog() {
 <template>
   <header>
     <HeaderComponent active="work" />
+    <LanguageSwitch />
   </header>
 
   <main class="w-full">
@@ -61,7 +63,9 @@ function hideDialog() {
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
           {{ t('HomeView.hi-im-marcelo') }} <br />
-          <span class="hidden text-8xl lg:flex">{{ t('HomeView.a-developer') }}</span>
+          <span class="hidden text-8xl lg:flex lg:justify-center">{{
+            t('HomeView.a-developer')
+          }}</span>
         </h1>
         <p class="text-[#b5fce4] my-6 text-md sm:text-lg md:text-xl">
           {{ t('HomeView.im-passionate-about') }}
@@ -405,48 +409,5 @@ function hideDialog() {
 .tecnologies-known-card:hover {
   user-select: none;
   transform: scale(1.01);
-}
-
-main {
-  background: linear-gradient(109deg, #111111, #161620, #1c1e29, #242736);
-  background-size: 100% 1000%;
-
-  -webkit-animation: bgDegradeAnimation 7s infinite;
-  -moz-animation: bgDegradeAnimation 7s infinite;
-  animation: bgDegradeAnimation 7s infinite;
-}
-
-@-webkit-keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
-}
-@-moz-keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
-}
-@keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
 }
 </style>
