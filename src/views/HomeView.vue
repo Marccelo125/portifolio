@@ -52,8 +52,11 @@ function hideDialog() {
 <template>
   <header>
     <HeaderComponent active="work" />
-    <LanguageSwitch />
   </header>
+
+  <section class="flex justify-center pt-16 lg:pt-0 lg:justify-start">
+    <LanguageSwitch />
+  </section>
 
   <main class="w-full">
     <section class="flex justify-center">
