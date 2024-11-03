@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 import { RouterLink } from 'vue-router'
 
 const props = defineProps({
@@ -10,35 +13,35 @@ const props = defineProps({
 </script>
 
 <template>
-  <nav class="flex align-center justify-center w-full fixed z-10 mt-4">
+  <nav class="flex align-center justify-center w-full fixed mt-4">
     <ul class="flex gap-4 lg:gap-8 p-3 text-sm lg:text-xl text-white font-bold">
       <RouterLink to="/" v-if="!props.active.includes('work')" class="link-item flex gap-1">
-        Work
+        {{ t('HeaderComponent.work') }}
         <mdicon name="slash-forward-box" />
       </RouterLink>
 
       <!-- ACTIVE -->
       <RouterLink to="/" v-if="props.active.includes('work')" class="active-item flex gap-1">
-        Work
+        {{ t('HeaderComponent.work') }}
         <mdicon name="slash-forward-box" />
       </RouterLink>
 
-      <RouterLink to="/about" v-if="!props.active.includes('about')" class="link-item"
-        >About</RouterLink
+      <RouterLink to="/about" v-if="!props.active.includes('about')" class="link-item">
+        {{ t('HeaderComponent.about') }}</RouterLink
       >
 
       <!-- ACTIVE -->
       <RouterLink to="/about" v-if="props.active.includes('about')" class="active-item">
-        About
+        {{ t('HeaderComponent.about') }}
       </RouterLink>
 
-      <RouterLink to="/contact" v-if="!props.active.includes('contact')" class="link-item"
-        >Contact</RouterLink
+      <RouterLink to="/contact" v-if="!props.active.includes('contact')" class="link-item">
+        {{ t('HeaderComponent.contact') }}</RouterLink
       >
 
       <!-- ACTIVE -->
       <RouterLink to="/Contact" v-if="props.active.includes('contact')" class="active-item">
-        Contact
+        {{ t('HeaderComponent.contact') }}
       </RouterLink>
     </ul>
   </nav>
@@ -49,6 +52,10 @@ const props = defineProps({
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   word-spacing: 0.375rem;
   user-select: none;
+}
+
+nav {
+  z-index: 9990;
 }
 
 ul {

@@ -1,0 +1,51 @@
+{
+  "HeaderComponent": {
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "FooterComponent": {
+    "contact": "Contact",
+    "repository": "Repository",
+    "inspirations": "Inspirations"
+  },
+  "HomeView": {
+    "hi-im-marcelo": "Hi. I'm Marcelo.",
+    "a-developer": "A Developer.",
+    "im-passionate-about": "I'm passionate about creating experiences with programming, web development and technology.",
+    "download-cv": "Download CV",
+    "my-projects": "MY PROJECTS",
+    "site-preview": "Site preview",
+    "end-preview": "End preview",
+    "in-progress": "Front-end & Back-end [in progress]"
+  },
+  "ContactView": {
+    "lets-start": "Let's start a project together.",
+    "project-together": "project together.",
+    "ways-to-contact-me": "There are several ways to contact me, try any of the ones below",
+    "additional-information": "Additional Information",
+    "contact": "Contact",
+    "location": "Location: Brazil"
+  },
+  "AboutView": {
+    "im-marcelo": "I'm Marcelo.",
+    "fullstack-developer": "I'm a Full Stack Web Developer working remotely from Brazil.",
+    "over-the-past-year": "Over the past year, I refined my skills at Growdev with the support of Sicredi Pioneira, while gaining experience in diverse environments that helped me develop both soft and hard skills.",
+    "now-seeking-oportunities": "I'm now seeking opportunities to work alongside top professionals, where I can continue to grow and deliver high-quality projects ahead of schedule.",
+    "courses-and-degrees": "Courses and Degrees",
+    "latest": "Latest",
+    "growdev-time": "From September 2023 to October 2024",
+    "growdev-info": "This is where I developed my programming skills, learning design patterns to clean code principles. I gained hands-on experience with technologies like Vue.js, Laravel (PHP), as well as frameworks such as Bootstrap and Vuetify.",
+    "senac-front-time": "From October 2023 to November 2023",
+    "senac-front-info": "This advanced course will enhance our JavaScript web development skills and improve teamwork and problem-solving abilities. With guidance from experienced professionals, we will work on real projects, preparing us for real-world challenges and ensuring we are ready to confidently enter the Front-End development field.",
+    "senac-js-time": "From August 2023 to September 2023",
+    "senac-js-info": " This Introduction to Developer course with JavaScript and Soft Skills at Senac provides an exciting start for beginners in programming and web development. We will learn JavaScript to create websites while developing teamwork and problem-solving skills. With hands-on experience in real projects and guidance from professionals, we'll be ready confidently enter the web development field.",
+    "senai-mech-name": "SENAI - Industrial machinery maintenance mechanic",
+    "senai-mech-time": "From September 2021 to April 2023",
+    "senai-mech-info": "This Maintenance Mechanics course at SENAI offers comprehensive training in industrial mechanics, focusing on diagnosing, repairing, and maintaining mechanical equipment. Experienced instructors emphasize interpersonal skills, preparing students for in-demand roles in manufacturing, oil, automotive, and energy sectors.",
+    "high-school-name": "High School Education",
+    "high-school-time": "Finished in December 2022",
+    "high-school-info": "Completed High School Education, gaining foundational knowledge and skills in various subjects, preparing for further academic and professional opportunities.",
+    "work-in-progress": "This portfolio is a work in progress."
+  }
+}
