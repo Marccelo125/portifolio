@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import FooterComponent from '@/components/FooterComponent.vue'
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import LanguageSwitch from '@/components/LanguageSwitch.vue'
 
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
@@ -12,6 +13,8 @@ const { t } = useI18n()
   </header>
 
   <main class="w-full">
+    <LanguageSwitch />
+
     <section class="flex justify-center">
       <div
         class="flex flex-col w-full lg:w-1/2 m-12 mt-36 md:m-12 md:mt-40 justify-center align-center text-center"
@@ -204,48 +207,5 @@ const { t } = useI18n()
 .listItem:hover time,
 .listItem:hover p {
   transform: scale(1.03);
-}
-
-main {
-  background: linear-gradient(109deg, #111111, #161620, #1c1e29, #242736);
-  background-size: 100% 1000%;
-
-  -webkit-animation: bgDegradeAnimation 7s infinite;
-  -moz-animation: bgDegradeAnimation 7s infinite;
-  animation: bgDegradeAnimation 7s infinite;
-}
-
-@-webkit-keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
-}
-@-moz-keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
-}
-@keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
 }
 </style>
