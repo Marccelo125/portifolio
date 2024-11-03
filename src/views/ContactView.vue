@@ -2,6 +2,9 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import ContactsComponent from '@/components/ContactsComponent.vue'
+
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 </script>
 
 <template>
@@ -19,11 +22,11 @@ import ContactsComponent from '@/components/ContactsComponent.vue'
             class="text-[#00FFAB] text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
             style="font-family: Archivo; letter-spacing: 0px"
           >
-            Let's start a <br />
-            project together.
+            {{ t('ContactView.lets-start') }} <br />
+            {{ t('ContactView.project-together') }}
           </h1>
           <p class="text-[#b5fce4] my-6 text-sm sm:text-md md:text-xl">
-            There are several ways to contact me, try any of the ones below
+            {{ t('ContactView.ways-to-contact-me') }}
           </p>
           <article class="flex justify-start align-center gap-4 md:gap-12 text-start">
             <ContactsComponent />
@@ -47,7 +50,9 @@ import ContactsComponent from '@/components/ContactsComponent.vue'
           />
         </article>
         <article>
-          <h2 class="mb-2 text-md font-semibold uppercase text-gray-500">Contact</h2>
+          <h2 class="mb-2 text-md font-semibold uppercase text-gray-500">
+            {{ t('ContactView.contact') }}
+          </h2>
           <ul class="text-white font-medium">
             <li class="mb-2">
               <a
@@ -67,7 +72,7 @@ import ContactsComponent from '@/components/ContactsComponent.vue'
             </li>
           </ul>
           <h2 class="mt-8 mb-2 text-md font-semibold uppercase text-gray-500">
-            Additional Information
+            {{ t('ContactView.additional-information') }}
           </h2>
           <ul class="text-white font-medium">
             <li class="mb-2">
@@ -75,7 +80,8 @@ import ContactsComponent from '@/components/ContactsComponent.vue'
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=contato.marccelo125@gmail.com"
                 target="_blank"
                 class="hover:underline"
-                >Location: Brazil</a
+              >
+                {{ t('ContactView.location') }}</a
               >
             </li>
           </ul>
