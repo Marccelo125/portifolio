@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+</script>
+
 <template>
   <footer class="bg-[#161620] border-t border-gray-700">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -17,7 +22,9 @@
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
           <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Contact</h2>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+              {{ t('FooterComponent.contact') }}
+            </h2>
             <ul class="text-gray-400 font-medium">
               <li class="mb-4">
                 <a
@@ -46,7 +53,9 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold text-white uppercase">Repository</h2>
+            <h2 class="mb-6 text-sm font-semibold text-white uppercase">
+              {{ t('FooterComponent.repository') }}
+            </h2>
             <ul class="text-gray-400 font-medium">
               <li class="mb-4">
                 <a href="https://github.com/marccelo125" target="_blank" class="hover:underline"
@@ -56,7 +65,9 @@
             </ul>
           </div>
           <div>
-            <h2 class="mb-6 text-sm font-semibold uppercase text-white">Inspirations</h2>
+            <h2 class="mb-6 text-sm font-semibold uppercase text-white">
+              {{ t('FooterComponent.inspirations') }}
+            </h2>
             <ul class="text-gray-400 font-medium">
               <li class="mb-4">
                 <a href="https://www.seanhalpin.xyz/" target="_blank" class="hover:underline"
