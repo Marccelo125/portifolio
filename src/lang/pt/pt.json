@@ -1,0 +1,51 @@
+{
+  "HeaderComponent": {
+    "work": "Projetos",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "FooterComponent": {
+    "contact": "Contato",
+    "repository": "Repositório",
+    "inspirations": "Inspirações"
+  },
+  "HomeView": {
+    "hi-im-marcelo": "Olá! Sou Marcelo.",
+    "a-developer": "Desenvolvedor.",
+    "im-passionate-about": "Sou apaixonado por criar experiências com programação, desenvolvimento web e tecnologia.",
+    "download-cv": "Baixar CV",
+    "my-projects": "MEUS PROJETOS",
+    "site-preview": "Visualização do site",
+    "end-preview": "Encerrar visualização",
+    "in-progress": "Front-end & Back-end [em andamento]"
+  },
+  "ContactView": {
+    "lets-start": "Vamos começar um",
+    "project-together": "projeto juntos.",
+    "ways-to-contact-me": "Existem várias formas de entrar em contato comigo, experimente qualquer uma abaixo",
+    "additional-information": "Informações adicionais",
+    "contact": "Contato",
+    "location": "Localização: Brasil"
+  },
+  "AboutView": {
+    "im-marcelo": "Eu sou Marcelo.",
+    "fullstack-developer": "Sou um Desenvolvedor Full Stack trabalhando remotamente do Brasil.",
+    "over-the-past-year": "No último ano, refinei minhas habilidades na Growdev com o suporte do Sicredi Pioneira, ganhando experiência em ambientes diversos que me ajudaram a desenvolver tanto hard quanto soft skills.",
+    "now-seeking-oportunities": "Agora, estou buscando oportunidades para trabalhar ao lado de profissionais de alto nível, onde posso continuar a crescer e entregar projetos de alta qualidade antes do prazo.",
+    "courses-and-degrees": "Cursos e Diplomas",
+    "latest": "Último",
+    "growdev-time": "De setembro de 2023 a outubro de 2024",
+    "growdev-info": "Aqui, desenvolvi minhas habilidades de programação, aprendendo desde padrões de design até princípios de código limpo. Ganhei experiência prática com tecnologias como Vue.js, Laravel (PHP), além de frameworks como Bootstrap e Vuetify.",
+    "senac-front-time": "De outubro de 2023 a novembro de 2023",
+    "senac-front-info": "Este curso avançado aprimorará nossas habilidades de desenvolvimento web com JavaScript, além de melhorar nossas habilidades de trabalho em equipe e resolução de problemas. Com a orientação de profissionais experientes, trabalharemos em projetos reais, nos preparando para os desafios do mundo real e garantindo que estejamos prontos para entrar com confiança no campo de desenvolvimento Front-End.",
+    "senac-js-time": "De agosto de 2023 a setembro de 2023",
+    "senac-js-info": "Este curso introdutório de Desenvolvimento com JavaScript e Soft Skills no Senac oferece um início empolgante para iniciantes em programação e desenvolvimento web. Aprenderemos JavaScript para criar websites enquanto desenvolvemos habilidades de trabalho em equipe e resolução de problemas. Com experiência prática em projetos reais e orientação de profissionais, estaremos prontos para entrar no campo de desenvolvimento web com confiança.",
+    "senai-mech-name": "SENAI - Mecanico de Manutenção Industrial",
+    "senai-mech-time": "De setembro de 2021 a abril de 2023",
+    "senai-mech-info": "O curso de Mecânica de Manutenção no SENAI oferece treinamento abrangente em mecânica industrial, com foco em diagnóstico, reparo e manutenção de equipamentos mecânicos. Instrutores experientes enfatizam habilidades interpessoais, preparando os alunos para cargos demandados nos setores de manufatura, petróleo, automotivo e energia.",
+    "high-school-name": "Ensino Médio",
+    "high-school-time": "Concluído em dezembro de 2022",
+    "high-school-info": "Conclusão do Ensino Médio, adquirindo conhecimentos e habilidades fundamentais em várias disciplinas, preparando-se para oportunidades acadêmicas e profissionais futuras.",
+    "work-in-progress": "Este portfólio está em desenvolvimento."
+  }
+}
