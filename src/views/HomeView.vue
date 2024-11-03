@@ -2,8 +2,12 @@
 import DynamicIframe from '@/components/DynamicIframe.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import LanguageSwitch from '@/components/LanguageSwitch.vue'
 import TecnologiesList from '@/components/TecnologiesList.vue'
 import { ref } from 'vue'
+
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 
 const actualUrl = ref<string>('')
 const iframeSwitch = ref<boolean>(false)
@@ -50,26 +54,31 @@ function hideDialog() {
     <HeaderComponent active="work" />
   </header>
 
+  <section class="flex justify-center pt-16 lg:pt-0 lg:justify-start">
+    <LanguageSwitch />
+  </section>
+
   <main class="w-full">
     <section class="flex justify-center">
       <div class="flex flex-col w-full lg:w-1/2 m-12 mt-28 justify-center align-center text-center">
         <h1
-          class="text-[#00FFAB] text-4xl sm:text-6xl md:text-7xl lg:text-8xl"
+          class="text-[#00FFAB] text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
           style="font-family: Archivo Black; letter-spacing: 0px"
         >
-          Hi. I'm Marcelo. <br />
-          <span>A Developer.</span>
+          {{ t('HomeView.hi-im-marcelo') }} <br />
+          <span class="hidden text-8xl lg:flex lg:justify-center">{{
+            t('HomeView.a-developer')
+          }}</span>
         </h1>
-        <p class="text-[#b5fce4] my-6 text-sm sm:text-md md:text-xl">
-          I'm passionate about creating experiences with programming, <br />
-          web development and technology.
+        <p class="text-[#b5fce4] my-6 text-md sm:text-lg md:text-xl">
+          {{ t('HomeView.im-passionate-about') }}
         </p>
         <div class="font-medium flex flex-col text-lg gap-4 text-white mt-2 mb-8">
           <div class="flex justify-center">
             <button class="btn-downloadcv flex align-center px-10 py-3 rounded-xl gap-2">
               <span
-                ><a href="https://marcelo-duarte-cv.tiiny.site/" target="_blank"
-                  >Download CV</a
+                ><a href="https://marcelo-duarte-cv.tiiny.site/" target="_blank">
+                  {{ t('HomeView.download-cv') }}</a
                 ></span
               >
               <mdicon name="TrayArrowDown" size="25" />
@@ -77,7 +86,7 @@ function hideDialog() {
           </div>
         </div>
         <div
-          class="tecnologies-known-card text-white p-0 md:p-4 lg:mx-24 lg:p-6 rounded-3xl text-sm md:text-md lg:text-xl"
+          class="tecnologies-known-card text-white py-4 px-0 md:p-4 lg:mx-24 lg:p-6 rounded-3xl text-sm md:text-md lg:text-xl"
         >
           <TecnologiesList data="all" />
         </div>
@@ -91,7 +100,7 @@ function hideDialog() {
             class="text-[#00FFAB] text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
             style="font-family: Archivo Black; letter-spacing: 0px"
           >
-            MY PROJECTS
+            {{ t('HomeView.my-projects') }}
           </h1>
         </div>
       </section>
@@ -109,7 +118,7 @@ function hideDialog() {
           <section>
             <article class="flex justify-between align-end">
               <p class="flex text-gray-200 items-center py-3 px-5 m-2 font-medium">
-                Visualização do site
+                {{ t('HomeView.site-preview') }}
               </p>
               <button
                 @click="hideDialog(), hideIframe()"
@@ -135,7 +144,7 @@ function hideDialog() {
               target="_blank"
               class="flex bg-gray-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
             >
-              Repositório Front-end
+              GitHub Front-end
             </a>
             <a
               v-if="gHubBack"
@@ -143,13 +152,13 @@ function hideDialog() {
               target="_blank"
               class="flex bg-gray-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
             >
-              Repositório Back-end
+              GitHub Back-end
             </a>
             <button
               @click="hideDialog(), hideIframe()"
               class="flex bg-red-600 font-medium py-3 px-5 m-4 rounded text-gray-200 shadow-md transition-all duration-200 hover:scale-105"
             >
-              Fechar Visualização
+              {{ t('HomeView.end-preview') }}
             </button>
           </section>
         </div>
@@ -169,9 +178,9 @@ function hideDialog() {
               "
             >
               <div class="text-end text-[#0b440e] p-6">
-                <p>Front-end & Back-end [in progress]</p>
+                <p>{{ t('HomeView.in-progress') }}</p>
                 <h1
-                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
                 >
                   Library
@@ -201,7 +210,7 @@ function hideDialog() {
               <div class="text-end text-[#442d0b] p-6">
                 <p>Front-end</p>
                 <h1
-                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
                 >
                   Starbucks Project
@@ -232,7 +241,7 @@ function hideDialog() {
               <div class="text-end text-[#002442] p-6">
                 <p>Front-end & Back-end</p>
                 <h1
-                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
                 >
                   Growtwitter
@@ -262,7 +271,7 @@ function hideDialog() {
               <div class="text-end text-[#440b31] p-6">
                 <p>Front-end</p>
                 <h1
-                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
                 >
                   Growflix
@@ -292,7 +301,7 @@ function hideDialog() {
               <div class="text-end text-[#4e0d0d] p-6">
                 <p>Front-end</p>
                 <h1
-                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
                 >
                   Calculadora FiveM
@@ -322,7 +331,7 @@ function hideDialog() {
               <div class="text-end text-[#150b44] p-6">
                 <p>Front-end</p>
                 <h1
-                  class="text-md sm:text-xl md:text-2xl lg:text-2xl font-bold"
+                  class="text-2xl md:text-3xl lg:text-2xl font-bold"
                   style="font-family: Source Sans 3"
                 >
                   Nikel
@@ -403,48 +412,5 @@ function hideDialog() {
 .tecnologies-known-card:hover {
   user-select: none;
   transform: scale(1.01);
-}
-
-main {
-  background: linear-gradient(109deg, #111111, #161620, #1c1e29, #242736);
-  background-size: 100% 1000%;
-
-  -webkit-animation: bgDegradeAnimation 7s infinite;
-  -moz-animation: bgDegradeAnimation 7s infinite;
-  animation: bgDegradeAnimation 7s infinite;
-}
-
-@-webkit-keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
-}
-@-moz-keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
-}
-@keyframes bgDegradeAnimation {
-  0% {
-    background-position: 73% 0%;
-  }
-  50% {
-    background-position: 28% 100%;
-  }
-  100% {
-    background-position: 73% 0%;
-  }
 }
 </style>
