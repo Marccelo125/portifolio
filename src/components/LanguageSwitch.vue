@@ -20,12 +20,43 @@ watchEffect(() => {
 </script>
 
 <template>
-  <div class="flex justify-end gap-6">
-    <button @click="setLanguage('pt')" class="bg-[#9c2c28] text-[#f1f1f1] p-2 rounded-lg">
+  <nav class="flex align-center justify-start w-full fixed mt-7 mx-6 gap-4">
+    <button
+      v-if="storedLang != 'pt'"
+      @click="setLanguage('pt')"
+      class="bg-[#424242] text-[#f1f1f1] p-2 rounded-lg"
+    >
       Portuguese
     </button>
-    <button @click="setLanguage('en')" class="bg-[#2b3586] text-[#f1f1f1] p-2 rounded-lg">
+
+    <button
+      v-if="storedLang === 'pt'"
+      @click="setLanguage('pt')"
+      class="bg-[#3e8a6a] text-[#f1f1f1] p-2 rounded-lg"
+    >
+      Portuguese
+    </button>
+
+    <button
+      v-if="storedLang != 'en'"
+      @click="setLanguage('en')"
+      class="bg-[#424242] text-[#f1f1f1] p-2 rounded-lg"
+    >
       English
     </button>
-  </div>
+
+    <button
+      v-if="storedLang === 'en'"
+      @click="setLanguage('en')"
+      class="bg-[#3e8a6a] text-[#f1f1f1] p-2 rounded-lg"
+    >
+      English
+    </button>
+  </nav>
 </template>
+
+<style scoped>
+nav {
+  z-index: 9990;
+}
+</style>
