@@ -10,8 +10,11 @@ const { t } = useI18n()
 <template>
   <header>
     <HeaderComponent active="about" />
-    <LanguageSwitch />
   </header>
+
+  <section class="flex justify-center pt-16 lg:pt-0 lg:justify-start">
+    <LanguageSwitch />
+  </section>
 
   <main class="w-full">
     <section class="flex justify-center">
