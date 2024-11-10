@@ -11,6 +11,14 @@ const props = defineProps({
   <div>
     <ul class="flex align-center justify-center flex-wrap gap-1 text-md">
       <li
+        v-if="props.data.includes('dotnet') || props.data.includes('all')"
+        class="flex font-semibold gap-1 bg-[#5C2D91] text-white"
+        style="border-color: #5c2d91"
+      >
+        <mdicon name="DevTo" />
+        .NET
+      </li>
+      <li
         v-if="props.data.includes('vuejs') || props.data.includes('all')"
         class="flex font-semibold gap-1 bg-[#00ffab] text-[#124b38]"
         style="border-color: #00ffab"
@@ -41,6 +49,14 @@ const props = defineProps({
       >
         <mdicon name="LanguageTypescript" />
         TypeScript
+      </li>
+      <li
+        v-if="props.data.includes('csharp') || props.data.includes('all')"
+        class="flex font-semibold gap-1 bg-[#7355f5] text-[#ffffff]"
+        style="border-color: #7355f5"
+      >
+        <mdicon name="LanguageCsharp" />
+        C Sharp
       </li>
       <li
         v-if="props.data.includes('php') || props.data.includes('all')"
@@ -81,14 +97,6 @@ const props = defineProps({
       >
         <mdicon name="bootstrap" />
         Bootstrap
-      </li>
-      <li
-        v-if="props.data.includes('mysql') || props.data.includes('all')"
-        class="flex font-semibold gap-1 bg-[#aa66f7] text-[#f7f7f7]"
-        style="border-color: #aa66f7"
-      >
-        <mdicon name="DatabaseSearch" />
-        MySQL
       </li>
     </ul>
   </div>
